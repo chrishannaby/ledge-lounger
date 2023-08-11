@@ -11,7 +11,10 @@
   <fieldset class="product-form__input">
     <legend class="form__label">{{ title }}</legend>
     {%- for product in collection.products -%}
-      {{ product.featured_image | image_url: width: 150 | image_tag: class: 'radio-input srapi', data-producturl: product.url }}
+        <label class="image-radio">
+            <input type="radio" {% if request.path == product.url %}checked{% endif %}>
+            {{ product.featured_image | image_url: width: 150 | image_tag: class: 'srapi', data-producturl: product.url }}
+        </label>
     {%- endfor -%}
   </fieldset>
 
@@ -21,7 +24,7 @@
     function addListeners() {
         document.querySelectorAll(".srapi").forEach((item) => {
             item.addEventListener("mouseover", fetchData);
-            item.addEventListener('touchstart', fetchData);
+            item.addEventListener("touchstart", fetchData);
             item.addEventListener("click", (event) => {
             fetchData(event).then((html) =>
                     renderProduct(html, event.target.dataset.producturl)
