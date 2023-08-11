@@ -21,6 +21,7 @@
     function addListeners() {
         document.querySelectorAll(".srapi").forEach((item) => {
             item.addEventListener("mouseover", fetchData);
+            button.addEventListener('touchstart', fetchData);
             item.addEventListener("click", (event) => {
             fetchData(event).then((html) =>
                     renderProduct(html, event.target.dataset.producturl)
