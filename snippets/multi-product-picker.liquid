@@ -1,0 +1,40 @@
+{% if rendering == "link" %}
+  <fieldset class="product-form__input">
+    <legend class="form__label">{{ title }}</legend>
+    {%- for product in collection.products -%}
+      <a class="radio-input" href="{{ product.url }}">
+        {{ product.featured_image | image_url: width: 100 | image_tag }}
+      </a>
+    {%- endfor -%}
+  </fieldset>
+{% else %}
+  <fieldset class="product-form__input">
+    <legend class="form__label">{{ title }}</legend>
+    {%- for product in collection.products -%}
+      {{ product.featured_image | image_url: width: 150 | image_tag: class: 'radio-input srapi', data-producturl: product.url }}
+    {%- endfor -%}
+  </fieldset>
+
+  <script>
+    function addListners() {
+      document.querySelectorAll(".srapi").forEach(item => {
+        item.addEventListener("click", fetchProduct);
+      })
+    }
+    addListners();
+
+    function fetchProduct(e) {
+      const query_url = e.target.dataset.producturl + '?section_id=' + "{{ section.id }}";
+      fetch(query_url).then(response => response.text()).then((responseText) => {
+        const change_html = new DOMParser().parseFromString(responseText, 'text/html').querySelector(".product").innerHTML;
+        renderProduct(change_html, e.target.dataset.producturl)
+      });
+    }
+
+    function renderProduct(html, url) {
+      history.pushState(null, "", url);
+      document.querySelector(".product").innerHTML = html
+      addListners()
+    }
+  </script>
+{% endif %}
