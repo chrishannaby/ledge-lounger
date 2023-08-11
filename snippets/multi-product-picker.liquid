@@ -16,25 +16,37 @@
   </fieldset>
 
   <script>
-    function addListners() {
-      document.querySelectorAll(".srapi").forEach(item => {
-        item.addEventListener("click", fetchProduct);
-      })
-    }
-    addListners();
+    var srapiPromises = {};
 
-    function fetchProduct(e) {
-      const query_url = e.target.dataset.producturl + '?section_id=' + "{{ section.id }}";
-      fetch(query_url).then(response => response.text()).then((responseText) => {
-        const change_html = new DOMParser().parseFromString(responseText, 'text/html').querySelector(".product").innerHTML;
-        renderProduct(change_html, e.target.dataset.producturl)
-      });
+    function addListeners() {
+        document.querySelectorAll(".srapi").forEach((item) => {
+            item.addEventListener("mouseover", fetchData);
+            item.addEventListener("click", (event) => {
+            fetchData(event).then((html) =>
+                    renderProduct(html, event.target.dataset.producturl)
+                );
+            });
+        });
+    }
+    addListeners();
+
+    function fetchData(e) {
+        const productUrl = e.target.dataset.producturl;
+        let productPromise = srapiPromises[productUrl];
+        if (!productPromise) {
+            const query_url = e.target.dataset.producturl + "?section_id=" + "{{ section.id }}";
+            productPromise = fetch(query_url).then((response) => response.text()).then((responseText) => {
+                return new DOMParser().parseFromString(responseText, "text/html").querySelector(".product").innerHTML;
+            });
+            srapiPromises[productUrl] = productPromise;
+        }
+        return productPromise;
     }
 
     function renderProduct(html, url) {
-      history.pushState(null, "", url);
-      document.querySelector(".product").innerHTML = html
-      addListners()
+        history.pushState(null, "", url);
+        document.querySelector(".product").innerHTML = html;
+        addListeners();
     }
   </script>
 {% endif %}
