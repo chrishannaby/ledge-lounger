@@ -1,25 +1,19 @@
 <section class="hero-section">
-  <div class="hero-image">
-    <img src="{{ 'your-image.jpg' | asset_url }}" alt="Describe your image here">
-  </div>
+  <img class="hero-image" src="{{ 'https://cdn.shopify.com/s/files/1/0808/4344/0423/files/Ledge-Lounger-Signature-Photos_0007_-857-__83804.1602866821.1280.1280.jpg?v=1691718760' }}" alt="Describe your image here">
   <div class="hero-content">
     <h1>Your Catchy Headline Goes Here</h1>
     <p>Your engaging subtext goes here. Make it compelling and interesting to your visitors.</p>
-    <a href="/your-link" class="cta-button">Your Call to Action</a>
+    <a href="/your-link" class="button">Your Call to Action</a>
   </div>
 </section>
 
-Sure, you can add a preset to the schema which will provide a default setup for the section. Here's how you can modify the previous example to include a preset:
-
-liquid
-Copy code
 
 {% schema %}
 {
   "name": "Hero section",
   "presets": [
     {
-      "name": "Default",
+      "name": "Hero section",
       "category": "Custom"
     }
   ]
@@ -28,27 +22,35 @@ Copy code
 
 {% stylesheet %}
 .hero-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #f4f4f4;
 }
 
 .hero-image {
-  width: 50%;
+  width: full;
+  height: auto;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 .hero-content {
-  width: 50%;
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.cta-button {
-  display: inline-block;
-  background-color: #ff0000;
-  color: #ffffff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+.hero-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+
 }
+
 {% endstylesheet %}
