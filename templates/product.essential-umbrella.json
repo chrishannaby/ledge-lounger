@@ -5,11 +5,13 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+          }
         },
         "price": {
           "type": "price",
-          "settings": {}
+          "settings": {
+          }
         },
         "e6163730-2602-4651-9e37-d40822d47f20": {
           "type": "multi_product_picker",
@@ -26,7 +28,8 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {}
+          "settings": {
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -36,7 +39,8 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+          }
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -114,7 +118,7 @@
           "type": "column",
           "settings": {
             "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -123,13 +127,16 @@
           "type": "column",
           "settings": {
             "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": ["column-0", "column-1"],
+      "block_order": [
+        "column-0",
+        "column-1"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -166,7 +173,8 @@
     },
     "c7d718ff-7442-4652-b4c0-e10a4d8e1f2f": {
       "type": "color-selector",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
