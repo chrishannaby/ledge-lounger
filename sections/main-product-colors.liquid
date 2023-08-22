@@ -486,7 +486,7 @@
                     {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input">
                         <legend class="form__label">{{ option.name }}</legend>
-                        {% if option.name == 'Color' %}
+                        {% if option.name == 'Color' or option.name == 'Operation' %}
                         {%- for value in option.values -%}
                                 {% assign filename = value | handleize | append: '.png' %}
 
@@ -500,9 +500,8 @@
                               checked
                             {% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                                      <img src="{{ filename | file_url }}" alt="{{ value }}" />
-
+                          <label class="color-radio" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                            <img loading="eager" width="40" height="40" src="{{ filename | file_url }}" alt="{{ value }}" />
                           </label>
                         {%- endfor -%}
                         {% else %}
