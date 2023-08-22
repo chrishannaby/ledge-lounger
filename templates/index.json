@@ -123,12 +123,69 @@
         "padding_top": 16,
         "padding_bottom": 16
       }
+    },
+    "4f21b785-1daf-47ce-b98b-d0337af54df8": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--20371545489703__4f21b785-1daf-47ce-b98b-d0337af54df8-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/USA.webp",
+            "title": "MADE IN THE U.S.A.",
+            "text": "<p>From concept to design to manufacturing, every Ledge Lounger product is made with pride in the United States of America.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20371545489703__4f21b785-1daf-47ce-b98b-d0337af54df8-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/UV.webp",
+            "title": "UV RESISTANT RESIN",
+            "text": "<p>Our fade-resistant in-pool furniture is rated UV20, which means it will last 20,000 hours in direct overhead sunlight (that means 10+ years of fade resistance)*<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20371545489703__4f21b785-1daf-47ce-b98b-d0337af54df8-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Commercial.webp",
+            "title": "COMMERCIAL GRADE",
+            "text": "<p>The same furniture you put in your backyard is also at high-end resorts around the world. That's because we use materials that are made to last.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20371545489703__4f21b785-1daf-47ce-b98b-d0337af54df8-column-1",
+        "template--20371545489703__4f21b785-1daf-47ce-b98b-d0337af54df8-column-2",
+        "template--20371545489703__4f21b785-1daf-47ce-b98b-d0337af54df8-column-3"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "c9e7c388-8f71-49e5-b3b5-059661f897f9",
-    "5bc2b289-1ee6-4761-8757-081c53d69d42"
+    "5bc2b289-1ee6-4761-8757-081c53d69d42",
+    "4f21b785-1daf-47ce-b98b-d0337af54df8"
   ]
 }
