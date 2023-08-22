@@ -135,10 +135,61 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "12793297677437526120": {
+        "type": "shopify:\/\/apps\/t-lab-ai-language-translate\/blocks\/custom_translations\/b5b83690-efd4-434d-8c6a-a5cef4019faf",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "8765772171712610185": {
+        "type": "shopify:\/\/apps\/t-lab-ai-language-translate\/blocks\/language_switcher\/b5b83690-efd4-434d-8c6a-a5cef4019faf",
+        "disabled": false,
+        "settings": {
+          "enable_language_switcher": true,
+          "enable_country_region_switcher": false,
+          "use_modal_dialog": false,
+          "use_currency_for_region": false,
+          "switcher_position": "custom",
+          "show_flags": true,
+          "language_label": "language-name",
+          "language_country_mapping": "",
+          "countries_filter": "",
+          "custom_css": "",
+          "header_switcher_reference_element": "",
+          "header_switcher_relative_position": "before",
+          "mobile_menu_switcher_reference_element": "",
+          "mobile_switcher_relative_position": "before",
+          "header_switcher_border_width": 0,
+          "switcher_viewport_position": "top-right",
+          "custom_position_spacing_top": "55",
+          "custom_position_spacing_right": "20",
+          "custom_position_spacing_bottom": "20",
+          "custom_position_spacing_left": "20",
+          "custom_switcher_font_size": "14px",
+          "custom_switcher_border_width": 1,
+          "custom_switcher_text_color": "#5c5c5c",
+          "custom_switcher_background_color": "#ffffff",
+          "custom_switcher_border_color": "#000000"
+        }
+      },
+      "5918445685253060206": {
+        "type": "shopify:\/\/apps\/bundler\/blocks\/bundler-script-append\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "11532412952436166569": {
+        "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-inject\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
     "color_schemes": {
       "background-1": {
         "settings": {
-          "background": "#fff",
+          "background": "#ffffff",
           "background_gradient": "",
           "text": "#121212",
           "button": "#0092bc",
@@ -153,7 +204,7 @@
           "background_gradient": "",
           "text": "#121212",
           "button": "#0092bc",
-          "button_label": "#fff",
+          "button_label": "#ffffff",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
@@ -184,8 +235,8 @@
         "settings": {
           "background": "#0092bc",
           "background_gradient": "",
-          "text": "#fff",
-          "button": "#fff",
+          "text": "#ffffff",
+          "button": "#ffffff",
           "button_label": "#0092bc",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
