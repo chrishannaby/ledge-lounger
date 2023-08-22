@@ -186,8 +186,8 @@
         "template--20371545489703__51187d5c-ed71-4fdb-9a03-a14fb3fb1243-text-1": {
           "type": "text",
           "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
+            "text": "STYLISH SERENITY",
+            "text_style": "subtitle"
           }
         },
         "template--20371545489703__51187d5c-ed71-4fdb-9a03-a14fb3fb1243-title-1": {
@@ -209,6 +209,7 @@
         },
         "template--20371545489703__51187d5c-ed71-4fdb-9a03-a14fb3fb1243-quantity_selector-1": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {
           }
         },
@@ -237,7 +238,7 @@
       ],
       "settings": {
         "product": "essential-umbrella-11-octagon",
-        "color_scheme": "",
+        "color_scheme": "accent-2",
         "secondary_background": false,
         "media_size": "medium",
         "constrain_to_viewport": true,
