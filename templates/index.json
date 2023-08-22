@@ -42,6 +42,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -82,11 +83,52 @@
         "padding_top": 0,
         "padding_bottom": 20
       }
+    },
+    "5bc2b289-1ee6-4761-8757-081c53d69d42": {
+      "type": "collection-list",
+      "blocks": {
+        "template--20371545489703__5bc2b289-1ee6-4761-8757-081c53d69d42-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "games"
+          }
+        },
+        "template--20371545489703__5bc2b289-1ee6-4761-8757-081c53d69d42-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "laze-pillow"
+          }
+        },
+        "template--20371545489703__5bc2b289-1ee6-4761-8757-081c53d69d42-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "barstools"
+          }
+        }
+      },
+      "block_order": [
+        "template--20371545489703__5bc2b289-1ee6-4761-8757-081c53d69d42-featured_collection-1",
+        "template--20371545489703__5bc2b289-1ee6-4761-8757-081c53d69d42-featured_collection-2",
+        "template--20371545489703__5bc2b289-1ee6-4761-8757-081c53d69d42-featured_collection-3"
+      ],
+      "settings": {
+        "title": "Trending Now",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "c9e7c388-8f71-49e5-b3b5-059661f897f9"
+    "c9e7c388-8f71-49e5-b3b5-059661f897f9",
+    "5bc2b289-1ee6-4761-8757-081c53d69d42"
   ]
 }
