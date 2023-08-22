@@ -1,4 +1,4 @@
-{% if rendering == "link" %}
+{% if rendering == 'link' %}
   <fieldset class="product-form__input">
     <legend class="form__label">{{ title }}</legend>
     {%- for product in collection.products -%}
@@ -11,10 +11,31 @@
   <fieldset class="product-form__input">
     <legend class="form__label">{{ title }}</legend>
     {%- for product in collection.products -%}
-        <label class="image-radio">
-            <input type="radio" {% if request.path == product.url %}checked{% endif %}>
-            {{ product.featured_image | image_url: width: 150 | image_tag: class: 'srapi', data-producturl: product.url }}
+      {% if product.metafields.custom.style_image %}
+        <input
+          type="radio"
+          {% if request.path == product.url %}
+            checked
+          {% endif %}
+        >
+        <label class="color-radio">
+          {{
+            product.metafields.custom.style_image
+            | image_url: width: 40, height: 40
+            | image_tag: class: 'srapi', data-producturl: product.url
+          }}
         </label>
+      {% else %}
+        <label class="image-radio">
+          <input
+            type="radio"
+            {% if request.path == product.url %}
+              checked
+            {% endif %}
+          >
+          {{ product.featured_image | image_url: width: 150 | image_tag: class: 'srapi', data-producturl: product.url }}
+        </label>
+      {% endif %}
     {%- endfor -%}
   </fieldset>
 
@@ -22,35 +43,35 @@
     var srapiPromises = {};
 
     function addListeners() {
-        document.querySelectorAll(".srapi").forEach((item) => {
-            item.addEventListener("mouseover", fetchData);
-            item.addEventListener("touchstart", fetchData);
-            item.addEventListener("click", (event) => {
-            fetchData(event).then((html) =>
-                    renderProduct(html, event.target.dataset.producturl)
-                );
-            });
+      document.querySelectorAll('.srapi').forEach((item) => {
+        item.addEventListener('mouseover', fetchData);
+        item.addEventListener('touchstart', fetchData);
+        item.addEventListener('click', (event) => {
+          fetchData(event).then((html) => renderProduct(html, event.target.dataset.producturl));
         });
+      });
     }
     addListeners();
 
     function fetchData(e) {
-        const productUrl = e.target.dataset.producturl;
-        let productPromise = srapiPromises[productUrl];
-        if (!productPromise) {
-            const query_url = e.target.dataset.producturl + "?section_id=" + "{{ section.id }}";
-            productPromise = fetch(query_url).then((response) => response.text()).then((responseText) => {
-                return new DOMParser().parseFromString(responseText, "text/html").querySelector(".product").innerHTML;
-            });
-            srapiPromises[productUrl] = productPromise;
-        }
-        return productPromise;
+      const productUrl = e.target.dataset.producturl;
+      let productPromise = srapiPromises[productUrl];
+      if (!productPromise) {
+        const query_url = e.target.dataset.producturl + '?section_id=' + '{{ section.id }}';
+        productPromise = fetch(query_url)
+          .then((response) => response.text())
+          .then((responseText) => {
+            return new DOMParser().parseFromString(responseText, 'text/html').querySelector('.product').innerHTML;
+          });
+        srapiPromises[productUrl] = productPromise;
+      }
+      return productPromise;
     }
 
     function renderProduct(html, url) {
-        history.pushState(null, "", url);
-        document.querySelector(".product").innerHTML = html;
-        addListeners();
+      history.pushState(null, '', url);
+      document.querySelector('.product').innerHTML = html;
+      addListeners();
     }
   </script>
 {% endif %}

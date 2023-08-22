@@ -523,10 +523,29 @@
                       {% endif %}
                       </fieldset>
                     {%- endfor -%}
+
                     <script type="application/json">
                       {{ product.variants | json }}
                     </script>
                   </variant-radios>
+                  {%- for option in product.metafields.custom.extra_options.value -%}
+                    <fieldset class="product-form__input">
+                      <legend class="form__label">{{ option.name.value }}</legend>
+                        {%- for value in option.values.value -%}
+                        <input
+                          type="radio"
+                          name="properties[{{ option.name.value }}]"
+                          value="{{ value.name.value | escape }}"
+                          id="{{ section.id }}-{{ option.name.value }}-{{ forloop.index0 }}"
+                          form="{{ product_form_id }}"
+                          {% if forloop.index == 1 %}checked{% endif %}
+                        >
+                        <label class="color-radio" for="{{ section.id }}-{{ option.name.value }}-{{ forloop.index0 }}">
+                            <img loading="eager" width="40" height="40" src="{{ value.image.value | image_url }}" alt="{{ value }}" />
+                        </label>
+                      {%- endfor -%}
+                    </fieldset>
+                  {%- endfor -%}
                 {%- else -%}
                   <variant-selects
                     class="no-js-hidden"
