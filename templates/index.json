@@ -67,10 +67,26 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "c9e7c388-8f71-49e5-b3b5-059661f897f9": {
+      "type": "video",
+      "settings": {
+        "heading": "Going Beyond The Ledge",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/vimeo.com\/455859466",
+        "cover_image": "shopify:\/\/shop_images\/Screenshot_2023-08-22_at_5.16.17_PM.png",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "c9e7c388-8f71-49e5-b3b5-059661f897f9"
   ]
 }
