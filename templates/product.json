@@ -80,6 +80,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -92,7 +93,7 @@
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 36,
+        "padding_top": 24,
         "padding_bottom": 28
       }
     },
@@ -162,12 +163,59 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "9f7d2358-581c-459c-8650-003260622765": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20371545784615__9f7d2358-581c-459c-8650-003260622765-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE FLOATING POOL PILLOW",
+            "heading_size": "h1"
+          }
+        },
+        "template--20371545784615__9f7d2358-581c-459c-8650-003260622765-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Laze Pillow is crafted from Ledge Lounger exclusive marine grade fabrics, guaranteed to withstand sunny days in any environment – from poolside to lakeside, even beachside. This pool pillow float is made from the strongest mold, mildew, and fade-resistant materials, so you can trust it to hold up against the elements through all of your pool parties, beach trips, and relaxing days on the lawn.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--20371545784615__9f7d2358-581c-459c-8650-003260622765-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20371545784615__9f7d2358-581c-459c-8650-003260622765-heading-1",
+        "template--20371545784615__9f7d2358-581c-459c-8650-003260622765-text-1",
+        "template--20371545784615__9f7d2358-581c-459c-8650-003260622765-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Ledge-Lounger-ATX-Ridge-Oak-RES-LFS-LO-LL-LZ-P-3458-2-1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "loox-product-reviews-app-section",
-    "35a989d2-7d4c-43fe-a57d-8ca9e981e0ec"
+    "35a989d2-7d4c-43fe-a57d-8ca9e981e0ec",
+    "9f7d2358-581c-459c-8650-003260622765"
   ]
 }
