@@ -42,6 +42,16 @@
               }
             });
           }
+          if(value[0] === 'parent') {
+            items.push({
+              id: value[1],
+              quantity: 1,
+              properties: {
+                bundleId
+                parent: true
+              }
+            });
+          }
         }
         fetch('/cart/add.js', {
           method: 'POST',
@@ -623,7 +633,7 @@
                           <input
                             type="radio"
                             id="{{ section.id }}-{{ line.name.value }}-{{ variant.id }}"
-                            name="line-{{ line.name.value | handleize}}"
+                            name="line-{{ line.name.value | handleize }}"
                             value="{{ variant.id }}"
                             {% if forloop.index == 1 %}
                               checked
@@ -638,6 +648,12 @@
                       type="hidden"
                       name="bundle-id"
                       value="{{ bundle.name.value | handleize }}"
+                      
+                    >
+                    <input
+                      type="hidden"
+                      name="parent"
+                      value="{{ product.first_available_variant.id }}"
                       
                     >
                     {% endif %}
