@@ -13,6 +13,20 @@
           "settings": {
           }
         },
+        "loox-rating": {
+          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -39,11 +53,6 @@
           "type": "share",
           "settings": {
             "share_label": "Share"
-          }
-        },
-        "loox-rating": {
-          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
           }
         }
       },
@@ -95,6 +104,7 @@
           "settings": {
             "only_photos": false,
             "aggregated": false,
+            "limit": 20,
             "hide_thumbnails": false,
             "maxwidth": 1080
           }
@@ -106,11 +116,58 @@
       "settings": {
         "include_margins": false
       }
+    },
+    "35a989d2-7d4c-43fe-a57d-8ca9e981e0ec": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20371545784615__35a989d2-7d4c-43fe-a57d-8ca9e981e0ec-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "POOLSIDE DAYDREAM",
+            "heading_size": "h1"
+          }
+        },
+        "template--20371545784615__35a989d2-7d4c-43fe-a57d-8ca9e981e0ec-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ledge Lounger in pool products are created for ultimate comfort and convenience, now your pool days will never be the same.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--20371545784615__35a989d2-7d4c-43fe-a57d-8ca9e981e0ec-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop In-Pool",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20371545784615__35a989d2-7d4c-43fe-a57d-8ca9e981e0ec-heading-1",
+        "template--20371545784615__35a989d2-7d4c-43fe-a57d-8ca9e981e0ec-text-1",
+        "template--20371545784615__35a989d2-7d4c-43fe-a57d-8ca9e981e0ec-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Ledge-Riverbluff-Fulshear-3191-Pearly-Swirls-1720x1040__71109.1667510547.1280.1280.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "loox-product-reviews-app-section"
+    "loox-product-reviews-app-section",
+    "35a989d2-7d4c-43fe-a57d-8ca9e981e0ec"
   ]
 }
